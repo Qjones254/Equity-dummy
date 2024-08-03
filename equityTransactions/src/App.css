@@ -40,9 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+.container{
+  padding: 20px;
+}
 .image{
-  height: 30px;
+  height: 55px;
 }
 .header{
   background-color: #fff;
+  color: brown;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+.header:hover{
+  color: rgb(16, 75, 16);
 }
