@@ -37,7 +37,8 @@ function Add(){
                 <label htmlFor="ammount">Ammount</label>
                 <input type="text" name='ammount' className='ammount'
                  onChange={e=>setInputData({...inputData, ammount:e.target.value})} />
-            </div>
+            </div><br/>
+            <button className='btn'>Submit</button>
             </form>
         </div>
     </div>

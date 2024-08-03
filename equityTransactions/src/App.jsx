@@ -1,6 +1,7 @@
 import "./App.css"
 import  React, {useEffect,useState}from "react";
 import image from './Components/images.png'
+import { Link } from "react-router-dom";
 
 function App(){
     const [columns,setColumns]=useState([])
@@ -24,7 +25,7 @@ function App(){
             <div className="header">
                 <h1> <img className="image" src={image} alt="" /> EQUITY TRANSACTIONS</h1>
             </div>
-            <div id="link"><a to='/create' href="./AppRoute.jsx"></a>Add</div>
+            <div className="link"><Link to='/create' >Add</Link></div>
             <table className="table">
                 <thead>
                     <tr>
