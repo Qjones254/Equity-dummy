@@ -1,5 +1,6 @@
 import "./App.css"
 import  React, {useEffect,useState}from "react";
+import image from './Components/images.png'
 
 function App(){
     const [columns,setColumns]=useState([])
@@ -18,7 +19,11 @@ function App(){
       })
     },[])
     return(
+    
         <div className="container">
+            <div className="header">
+                <h1> <img className="image" src={image} alt="" /> EQUITY TRANSACTIONS</h1>
+            </div>
             <table className="table">
                 <thead>
                     <tr>
