@@ -24,6 +24,7 @@ function App(){
             <div className="header">
                 <h1> <img className="image" src={image} alt="" /> EQUITY TRANSACTIONS</h1>
             </div>
+            <div id="link"><a to='/create' href="./AppRoute.jsx"></a>Add</div>
             <table className="table">
                 <thead>
                     <tr>
@@ -31,6 +32,7 @@ function App(){
                     <th key={i}>{c}</th>
                     
                  ))}
+                 
                 <th>ID</th>
                 <th>DATE</th>
                 <th>DESCRIPTION</th>

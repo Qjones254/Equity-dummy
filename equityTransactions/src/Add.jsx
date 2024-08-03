@@ -1,0 +1,46 @@
+
+import React,{ useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+function Add(){
+    const [inputData,setInputData]=useState({date:'',description:'',category:'',ammount:''})
+    const navigate = useNavigate();
+    function handleSubmit(event){
+        event.preventDefault()
+        fetch('http://localhost:3000/transactions',inputData)
+        .then(res=>{
+            alert("Data Added Successfully!");
+            navigate('/');
+        }).catch(err =>console.log(err));
+    }
+     return(
+    <div className='addPage'>
+        <div className='addLayout'>
+            <div>
+                <label htmlFor="date">  Date</label>
+                <input type="text" name='date' className='date'
+                 onChange={e=>setInputData({...inputData, date:e.target.value})}/>
+            </div>
+            <form onSubmit={handleSubmit} >
+            <div>
+                <label htmlFor="description">Description</label>
+                <input type="text" name='description' className='description' 
+                onChange={e=>setInputData({...inputData, description:e.target.value})}/>
+                
+            </div>
+            <div>
+                <label htmlFor="category">Category</label>
+                <input type="text" name='category' className='category' 
+                 onChange={e=>setInputData({...inputData, category:e.target.value})}/>
+            </div>
+            <div>
+                <label htmlFor="ammount">Ammount</label>
+                <input type="text" name='ammount' className='ammount'
+                 onChange={e=>setInputData({...inputData, ammount:e.target.value})} />
+            </div>
+            </form>
+        </div>
+    </div>
+)}
+
+export default Add
