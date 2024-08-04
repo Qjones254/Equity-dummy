@@ -57,8 +57,8 @@
 .header:hover{
   color: rgb(16, 75, 16);
 }
-#link{
-  background-color: rgb(24, 121, 88);
+.link{
+  background-color: rgb(11, 59, 43);
   width: 100px;
   text-align: center;
   border-radius: 17px;

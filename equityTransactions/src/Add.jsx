@@ -1,3 +1,4 @@
+//  NB this file is for the add link on the webpage
 //importing axios for fetching
 import axios from 'axios'
 import React,{ useState } from 'react'
@@ -17,13 +18,15 @@ function Add(){
             
 
     }).catch(err =>console.log(err));
-    }
+    }//the form below is for the inputs on add page
      return(
     <div className='addPage'>
         <div className='addLayout'>
+        
         <form onSubmit={handleSubmit} >
-            
+    
             <div>
+                
                 <label htmlFor="date">  Date</label>
                 <input type="text" name='date' className='date'
                  onChange={e=>setInputData({...inputData, date:e.target.value})}/>

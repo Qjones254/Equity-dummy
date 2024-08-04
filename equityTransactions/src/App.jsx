@@ -1,11 +1,13 @@
 import "./App.css"
 import  React, {useEffect,useState}from "react";
 import image from './Components/images.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios'
 
 function App(){
     const [columns,setColumns]=useState([])
     const[records,setRecords]=useState([])
+    const navigate=useNavigate()
     useEffect(()=>{
         //fetching from db json
       fetch('http://localhost:3000/transactions')
@@ -48,7 +50,7 @@ function App(){
                  </tr>
                 </thead>
                 <tbody>
-                    {
+                    {//the delete button has a function handle Submit for delete functionality
                         records.map((d,i) => (
                            <tr key={i}>
                             <td>{d.id}</td>
@@ -58,7 +60,7 @@ function App(){
                             <td> {d.ammount} </td>
                             <td>
                                 
-                                <button onclick={e=> handleSubmit (d.id)}className="delete">Delete</button>
+                                <button onClick={e=> handleSubmit (d.id)}className="delete">Delete</button>
                             </td>
                            </tr>
                         )
@@ -67,8 +69,18 @@ function App(){
             </table>
         </div>
     );
+    //function for deleting
     function handleSubmit(id){
+     const conf=  window.confirm("Do you want to Delete?");
+     if(conf){
+        //deleting the data from the db json
+        axios.delete('http://localhost:3000/transactions/' +id)
+        .then(()=>{
+            alert('record has been deleted');
+            navigate('/')
         
+        }).catch(err=> console.log(err))
+     }
     }
 }
 
