@@ -5,6 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 
 function App(){
+    //this is for the search bar
+    const [search,setSearch] = useState('')
+    console.log(search)
     const [columns,setColumns]=useState([])
     const[records,setRecords]=useState([])
     const navigate=useNavigate()
@@ -32,6 +35,11 @@ function App(){
             <div className="header">
                 <h1> <img className="image" src={image} alt="" /> EQUITY TRANSACTIONS</h1>
             </div>
+            <div>
+                <form >
+                    <input onChange={(e)=> setSearch(e.target.value)} className="input" type="text" placeholder="Search Transactions"/>
+                </form>
+            </div>
             <div className="link"><Link to='/create' >Add</Link></div>
             <table className="table">
                 <thead>
@@ -51,7 +59,15 @@ function App(){
                 </thead>
                 <tbody>
                     {//the delete button has a function handle Submit for delete functionality
-                        records.map((d,i) => (
+                       
+                       //filtering the search bar
+                       records.filter((d)=>{
+                            return search.toLowerCase() ===''? d:d.
+                            description.toLowerCase().includes(search);
+                            
+                           
+
+                        }).map((d,i) => (
                            <tr key={i}>
                             <td>{d.id}</td>
                             <td> {d.date} </td>

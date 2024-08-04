@@ -65,6 +65,7 @@
   margin-bottom: 5px;
   font-weight: bolder;
   cursor: pointer;
+  color: #fff;
 }
 .update{
   background-color: rgb(8, 68, 8);
@@ -78,4 +79,8 @@ background-color:rgb(129, 21, 21);
 color: #fff;
 font-size: large;
 font-weight: bold;
+}
+.input{
+  height: 20px;
+  width: 200px;
 }
