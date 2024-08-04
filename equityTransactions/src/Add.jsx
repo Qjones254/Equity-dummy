@@ -1,4 +1,5 @@
-
+//importing axios for fetching
+import axios from 'axios'
 import React,{ useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -7,7 +8,7 @@ function Add(){
     const navigate = useNavigate();
     function handleSubmit(event){
         event.preventDefault()
-        fetch('http://localhost:3000/transactions',inputData)
+        axios.post('http://localhost:3000/transactions',inputData)
         .then(res=>{
             alert("Data Added Successfully!");
             navigate('/');
