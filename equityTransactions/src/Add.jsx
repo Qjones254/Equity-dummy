@@ -3,6 +3,7 @@
 import axios from 'axios'
 import React,{ useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Add.css'
 //creating functionality to the add page
 function Add(){
     const [inputData,setInputData]=useState({date:'',description:'',category:'',ammount:''})
