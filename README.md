@@ -20,5 +20,4 @@ Feel free to test it by clicking Add on the top left side and inputing the detai
  You will notice that it will be added on the list
  Try the delete button on the end of every transaction and accept the alert sent then REFRESH the page.
 
- VIEW THE PAGE BELOW
  
