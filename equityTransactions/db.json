@@ -97,6 +97,13 @@
       "category": "Food",
       "ammount": "3000",
       "id": "14"
+    },
+    {
+      "id": "15",
+      "date": "2017-3-23",
+      "description": "Clothes",
+      "category": "income",
+      "ammount": "2000"
     }
   ]
 }

@@ -24,6 +24,12 @@ function Add(){
         <div className='addLayout'>
         
         <form onSubmit={handleSubmit} >
+        <div>
+                
+                <label htmlFor="date">  Id</label>
+                <input type="text" name='id' className='id'
+                 onChange={e=>setInputData({...inputData, id:e.target.value})}/>
+            </div>
     
             <div>
                 
