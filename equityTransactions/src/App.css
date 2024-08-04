@@ -66,3 +66,16 @@
   font-weight: bolder;
   cursor: pointer;
 }
+.update{
+  background-color: rgb(8, 68, 8);
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
+
+}
+.delete{
+background-color:rgb(129, 21, 21);
+color: #fff;
+font-size: large;
+font-weight: bold;
+}

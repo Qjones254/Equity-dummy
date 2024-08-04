@@ -2,12 +2,14 @@
 import axios from 'axios'
 import React,{ useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+//creating functionality to the add page
 function Add(){
     const [inputData,setInputData]=useState({date:'',description:'',category:'',ammount:''})
     const navigate = useNavigate();
+    //event and event listener
     function handleSubmit(event){
         event.preventDefault()
+        //this returns input to the json
         axios.post('http://localhost:3000/transactions',inputData)
         .then(res=>{
             alert("Data Added Successfully!");
@@ -20,6 +22,7 @@ function Add(){
     <div className='addPage'>
         <div className='addLayout'>
         <form onSubmit={handleSubmit} >
+            
             <div>
                 <label htmlFor="date">  Date</label>
                 <input type="text" name='date' className='date'
