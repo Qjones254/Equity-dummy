@@ -11,17 +11,20 @@ function Add(){
         .then(res=>{
             alert("Data Added Successfully!");
             navigate('/');
-        }).catch(err =>console.log(err));
+            
+
+    }).catch(err =>console.log(err));
     }
      return(
     <div className='addPage'>
         <div className='addLayout'>
+        <form onSubmit={handleSubmit} >
             <div>
                 <label htmlFor="date">  Date</label>
                 <input type="text" name='date' className='date'
                  onChange={e=>setInputData({...inputData, date:e.target.value})}/>
             </div>
-            <form onSubmit={handleSubmit} >
+           
             <div>
                 <label htmlFor="description">Description</label>
                 <input type="text" name='description' className='description' 

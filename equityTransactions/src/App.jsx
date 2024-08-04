@@ -12,12 +12,12 @@ function App(){
         return res.json();
        
        
-      })
+      })     
       .then(data=>{
         setRecords(data)
          setColumns(object.keys(data[0]))
 
-      })
+        })
     },[])
     return(
     
