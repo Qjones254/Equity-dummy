@@ -22,7 +22,7 @@ function App(){
       })    //displaying the transactions on raws and columns bcause it is a table 
       .then(data=>{
         setRecords(data)
-         setColumns(object.keys(data[0]))
+        setColumns(Object.keys(data[0]))
 
         })
     },[])
@@ -49,12 +49,12 @@ function App(){
                     
                  ))}
                  
-                <th>ID</th>
+                {/*<th>ID</th>
                 <th>DATE</th>
                 <th>DESCRIPTION</th>
                 <th>CATEGORY</th>
                 <th>AMMOUNT</th>
-                <th>ACTION</th>
+                <th>ACTION</th>*/}
                  </tr>
                 </thead>
                 <tbody>
