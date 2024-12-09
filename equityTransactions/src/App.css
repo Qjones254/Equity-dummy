@@ -84,3 +84,6 @@ font-weight: bold;
   height: 20px;
   width: 200px;
 }
+tr td{
+  border:solid 1px #ccc;
+}
