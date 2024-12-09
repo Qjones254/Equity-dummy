@@ -13,7 +13,7 @@ function App(){
     const navigate=useNavigate()
     useEffect(()=>{
         //fetching from db json
-      fetch('http://localhost:3000/transactions')
+      fetch('https://equity-dummy-2.onrender.com/transactions')
       .then(res=>{
         //calling the response
         return res.json();
@@ -90,7 +90,7 @@ function App(){
      const conf=  window.confirm("Do you want to Delete?");
      if(conf){
         //deleting the data from the db json
-        axios.delete('http://localhost:3000/transactions/' +id)
+        axios.delete('https://equity-dummy-2.onrender.com/transactions' +id)
         .then(()=>{
             alert('record has been deleted');
             navigate('/')

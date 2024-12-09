@@ -12,7 +12,7 @@ function Add(){
     function handleSubmit(event){
         event.preventDefault()
         //this returns input to the json
-        axios.post('http://localhost:3000/transactions',inputData)
+        axios.post('https://equity-dummy-2.onrender.com/transactions',inputData)
         .then(res=>{
             alert("Data Added Successfully!");
             navigate('/');
