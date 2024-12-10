@@ -87,3 +87,64 @@ font-weight: bold;
 tr td{
   border:solid 1px #ccc;
 }
+
+/*Responsiveness*/
+@media screen and (max-width: 667px) {
+ .container{
+    padding: 10px;
+    width: 100%;
+  }
+ .link{
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .container{
+     padding: 20px;
+   }
+  .link{
+     width: 170px;
+     font-size: 35px;
+   }
+   tr td{
+    font-size: 35px;
+   }
+   .delete{
+    font-size: 26px;
+   }
+   .input{
+    width: 250px;
+    font-size: 26px;
+    height: 30px;
+   }
+   tr{
+    font-size: 29px;
+   }
+ }
+
+ @media screen and (max-width: 1180px) {
+   .container{
+      padding: 15px;
+    }
+   .link{
+      width: 150px;
+      font-size: 30px;
+    }
+   tr td{
+    font-size: 30px;
+   }
+   .delete{
+    font-size: 24px;
+   }
+   .input{
+    width: 220px;
+    font-size: 24px;
+    height: 25px;
+   }
+   tr{
+    font-size: 26px;
+   }
+
+ }
+
